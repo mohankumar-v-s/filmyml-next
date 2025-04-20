@@ -27,7 +27,7 @@ export default function RecommendedSection({ recommendedMovies }: RecommendedSec
                                     src={
                                         movie.poster_path
                                             ? `https://www.themoviedb.org/t/p/w440_and_h660_face${movie.poster_path}`
-                                            : "/placeholder.svg"
+                                            : "/assets/No-Image-Placeholder.png"
                                     }
                                     alt={movie.title || movie.original_name}
                                     fill
