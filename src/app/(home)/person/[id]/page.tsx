@@ -58,8 +58,6 @@ export default async function PersonPage({
   const person = data?.details;
   const credits: CreditItem[] = data?.credits?.cast || [];
 
-  console.log(data?.images)
-
   // remove duplicate credits based on id + media_type
   const uniqueCredits: CreditItem[] = Array.from(
     new Map(credits.map((c) => [c.id + c.media_type, c])).values()
