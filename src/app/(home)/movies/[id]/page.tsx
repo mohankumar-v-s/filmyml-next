@@ -1,9 +1,8 @@
-import Image from "next/image"
 import React from "react"
 import { Clock } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import CastSection from "@/components/cast-section"
+import CastSection, { CastMember } from "@/components/cast-section"
 import VideoSection from "@/components/video-section"
 import BackdropsSection from "@/components/backdrops-section"
 import PostersSection from "@/components/posters-section"
@@ -97,7 +96,12 @@ export default async function MovieDetails({
                                 WATCH NOW
                             </Button> */}
 
-                            <CastSection castMembers={movies?.cast?.cast.slice(0, 20) || []} />
+                            <CastSection castMembers={(movies?.cast?.cast.slice(0, 20) || []).map((c: { id: number; name: string; character: string; profile_path: string | null }) => ({
+                                id: c.id,
+                                name: c.name,
+                                character: c.character,
+                                profile_path: c.profile_path,
+                            })) as CastMember[]} />
                         </div>
                     </div>
 

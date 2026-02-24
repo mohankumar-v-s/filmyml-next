@@ -1,6 +1,7 @@
-import Image from "next/image"
+import Link from "next/link"
 
-interface CastMember {
+export interface CastMember {
+    id: number;
     name: string;
     character: string;
     profile_path: string;
@@ -15,8 +16,10 @@ export default function CastSection({ castMembers }: CastSectionProps) {
         <div className="mb-12 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
             <h2 className="mb-4 text-xl font-bold uppercase">Cast</h2>
             <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4">
-                {castMembers.map((member, index) => (
-                    <div key={index} className="flex-shrink-0 text-center bg-white rounded">
+                {castMembers.map((member) => (
+                    <Link key={member.id} href={`/person/${member.id}`}
+                        className="flex-shrink-0 text-center bg-white rounded hover:shadow-lg transition-shadow"
+                    >
                         <div className="relative h-40 w-36 overflow-hidden rounded-t cursor-pointer">
                             <img
                                 src={
@@ -31,7 +34,7 @@ export default function CastSection({ castMembers }: CastSectionProps) {
                         </div>
                         <h3 className="my-1 text-sm font-medium text-black truncate max-w-36 cursor-pointer">{member.name}</h3>
                         <h4 className="my-1 text-sm font-medium text-black truncate max-w-36 cursor-pointer">{member.character}</h4>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
