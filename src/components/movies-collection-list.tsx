@@ -11,7 +11,7 @@ interface collectionListProps {
 export default function MoviesCollectionList({ collectionList, collectionName, collectionType }: collectionListProps) {
     return (
         <div>
-            <p className="text-2xl">{collectionName}</p>
+            <p className="text-2xl text-gray-100">{collectionName}</p>
             <div className="flex w-[96vw] overflow-x-scroll no-scrollbar">
                 {collectionList?.map(
                     ({ id, poster_path, original_name, title }: { id: number; poster_path: string; original_name: string; media_type: string; title: string }) => (

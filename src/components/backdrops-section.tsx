@@ -24,6 +24,8 @@ export default function BackdropsSection({ backdropImages }: { backdropImages: B
                 </div>
 
                 <button
+                    aria-labelledby="Left"
+                    title="left"
                     className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
                     onClick={() => setCurrentBackdrop((prev) => Math.max(0, prev - 1))}
                 >
@@ -31,6 +33,7 @@ export default function BackdropsSection({ backdropImages }: { backdropImages: B
                 </button>
 
                 <button
+                    title="right"
                     className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80"
                     onClick={() => setCurrentBackdrop((prev) => Math.min(4, prev + 1))}
                 >
@@ -42,6 +45,7 @@ export default function BackdropsSection({ backdropImages }: { backdropImages: B
                 {backdropImages?.map((_, index) => (
                     <button
                         key={index}
+                        title="images"
                         className={`h-2 w-2 rounded-full ${currentBackdrop === index ? "bg-red-600" : "bg-gray-600"}`}
                         onClick={() => setCurrentBackdrop(index)}
                     />

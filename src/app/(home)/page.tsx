@@ -1,5 +1,6 @@
 import React from "react"
 import MoviesCollectionList from "@/components/movies-collection-list";
+import HeroSection from "@/components/hero-section";
 
 async function getHomeDetails() {
     const apiKey = process.env.TMDB_MOVIE_API_KEY;
@@ -39,32 +40,35 @@ export default async function Home() {
     console.log(home?.popular?.results)
 
     return (
-        <div className="pt-8 pl-2 pb-12 text-white bg-black">
-            <MoviesCollectionList
-                collectionName="Trending Movies"
-                collectionType='movie'
-                collectionList={home?.trending?.results}
-            />
-            <MoviesCollectionList
-                collectionName="Popular Movies"
-                collectionType='movie'
-                collectionList={home?.popular?.results}
-            />
-            <MoviesCollectionList
-                collectionName="Top Rated Movies"
-                collectionType='movie'
-                collectionList={home?.topRated?.results}
-            />
-            <MoviesCollectionList
-                collectionName="Popular Series"
-                collectionType='tv'
-                collectionList={home?.popularSeries?.results}
-            />
-            <MoviesCollectionList
-                collectionName="Top Rated Series"
-                collectionType='tv'
-                collectionList={home?.topRatedSeries?.results}
-            />
+        <div className="">
+            <HeroSection collectionList={home?.trending?.results} />
+            <div className="bg-black">
+                <MoviesCollectionList
+                    collectionName="Trending Movies"
+                    collectionType='movie'
+                    collectionList={home?.trending?.results}
+                />
+                <MoviesCollectionList
+                    collectionName="Popular Movies"
+                    collectionType='movie'
+                    collectionList={home?.popular?.results}
+                />
+                <MoviesCollectionList
+                    collectionName="Top Rated Movies"
+                    collectionType='movie'
+                    collectionList={home?.topRated?.results}
+                />
+                <MoviesCollectionList
+                    collectionName="Popular Series"
+                    collectionType='tv'
+                    collectionList={home?.popularSeries?.results}
+                />
+                <MoviesCollectionList
+                    collectionName="Top Rated Series"
+                    collectionType='tv'
+                    collectionList={home?.topRatedSeries?.results}
+                />
+            </div>
         </div >
     );
 }

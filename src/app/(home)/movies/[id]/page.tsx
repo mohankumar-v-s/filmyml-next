@@ -58,7 +58,7 @@ export default async function MovieDetails({
         <div className="bg-[#111827] h-full max-w-screen">
             <div className="min-h-screen py-12 bg-black text-white">
                 <main className="container mx-auto px-4">
-                    <div className="relative mt-2 flex flex-col lg:flex-row md:items-start lg:gap-8">
+                    <div className="relative mt-10 flex flex-col lg:flex-row md:items-start lg:gap-8">
                         <div className="relative mb-6 flex-shrink-0 md:mb-0 md:w-full lg:w-1/4">
                             <Image
                                 src={`${movies?.details?.poster_path ? IMAGE_PATH + movies?.details?.poster_path : "/assets/No-Image-Placeholder.png"}`}
@@ -67,6 +67,7 @@ export default async function MovieDetails({
                                 height={450}
                                 className="rounded-lg mx-auto"
                                 priority
+                                unoptimized={true}
                             />
                         </div>
 

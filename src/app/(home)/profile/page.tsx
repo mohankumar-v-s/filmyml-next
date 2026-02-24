@@ -12,6 +12,7 @@ export default function Profile() {
                     alt="profile_pic"
                     height={128}
                     width={128}
+                    unoptimized={true}
                 />
             </div>
             <div className="w-full md:w-96">

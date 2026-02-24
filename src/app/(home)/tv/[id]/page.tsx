@@ -47,7 +47,7 @@ export default async function TVDetails({
     return (
         <div className="bg-[#111827] h-full max-w-screen">
             <div className="min-h-screen py-12 bg-black text-white">
-                <main className="container mx-auto px-4">
+                <main className="container mx-auto px-4 pt-10">
                     <div className="relative mt-2 flex flex-col lg:flex-row md:items-start lg:gap-8">
                         <div className="relative mb-6 flex-shrink-0 md:mb-0 md:w-full lg:w-1/4">
                             <Image
@@ -57,6 +57,7 @@ export default async function TVDetails({
                                 height={450}
                                 className="rounded-lg mx-auto"
                                 priority
+                                unoptimized={true}
                             />
                         </div>
 

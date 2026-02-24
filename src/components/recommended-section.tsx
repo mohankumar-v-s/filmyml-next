@@ -33,6 +33,7 @@ export default function RecommendedSection({ recommendedMovies }: RecommendedSec
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 20vw"
                                     className="object-cover transition-transform group-hover:scale-105"
+                                    unoptimized={true}
                                 />
                             </div>
                             <h3 className="mt-2 text-sm font-medium">{movie.title || movie.original_name}</h3>
