@@ -20,7 +20,7 @@ export default function BackdropsSection({ backdropImages }: { backdropImages: B
 
             <div className="relative">
                 <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                    <Image src={`https://image.tmdb.org/t/p/w500${backdropImages[currentBackdrop]?.file_path}`} alt="Movie backdrop" fill className="object-cover" />
+                    <img src={`https://image.tmdb.org/t/p/w500${backdropImages[currentBackdrop]?.file_path}`} alt="Movie backdrop" className="object-cover" />
                 </div>
 
                 <button

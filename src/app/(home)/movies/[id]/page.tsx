@@ -60,14 +60,12 @@ export default async function MovieDetails({
                 <main className="container mx-auto px-4">
                     <div className="relative mt-10 flex flex-col lg:flex-row md:items-start lg:gap-8">
                         <div className="relative mb-6 flex-shrink-0 md:mb-0 md:w-full lg:w-1/4">
-                            <Image
+                            <img
                                 src={`${movies?.details?.poster_path ? IMAGE_PATH + movies?.details?.poster_path : "/assets/No-Image-Placeholder.png"}`}
                                 alt={movies?.details?.title || "Movie Poster"}
                                 width={300}
                                 height={450}
                                 className="rounded-lg mx-auto"
-                                priority
-                                unoptimized={true}
                             />
                         </div>
 

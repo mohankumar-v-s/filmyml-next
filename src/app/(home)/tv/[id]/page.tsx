@@ -50,14 +50,13 @@ export default async function TVDetails({
                 <main className="container mx-auto px-4 pt-10">
                     <div className="relative mt-2 flex flex-col lg:flex-row md:items-start lg:gap-8">
                         <div className="relative mb-6 flex-shrink-0 md:mb-0 md:w-full lg:w-1/4">
-                            <Image
+                            <img
                                 src={`${tv?.details?.poster_path ? IMAGE_PATH + tv?.details?.poster_path : "/assets/No-Image-Placeholder.png"}`}
                                 alt={tv?.details?.original_name || "Movie Poster"}
                                 width={300}
                                 height={450}
                                 className="rounded-lg mx-auto"
-                                priority
-                                unoptimized={true}
+
                             />
                         </div>
 

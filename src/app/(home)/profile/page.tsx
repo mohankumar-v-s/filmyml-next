@@ -6,13 +6,12 @@ export default function Profile() {
     return (
         <div className="py-[5rem] text-white p-2 flex flex-col justify-center items-center bg-[#111827]">
             <div className="flex">
-                <Image
+                <img
                     className="h-32 w-32 rounded-full object-cover"
                     src={`/assets/avatar_default.jpg`}
                     alt="profile_pic"
                     height={128}
                     width={128}
-                    unoptimized={true}
                 />
             </div>
             <div className="w-full md:w-96">

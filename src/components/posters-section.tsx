@@ -15,10 +15,9 @@ export default function PostersSection({ posters }: { posters: Posters[] }) {
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                 {posters.map((poster, index) => (
                     <div key={index} className="relative aspect-[2/3] overflow-hidden rounded-lg">
-                        <Image
+                        <img
                             src={`https://image.tmdb.org/t/p/w500${poster?.file_path}`}
                             alt={`Movie poster ${index}`}
-                            fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                             className="object-cover transition-transform hover:scale-105"
                         />

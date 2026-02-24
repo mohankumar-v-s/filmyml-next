@@ -8,7 +8,7 @@ export default function ReviewsSection() {
             <div className="rounded-lg bg-gray-900 p-4">
                 <div className="mb-4 flex items-center gap-3">
                     <div className="relative h-10 w-10 overflow-hidden rounded-full bg-gray-700">
-                        <Image src="/placeholder.svg?height=40&width=40" alt="User avatar" fill className="object-cover" />
+                        <img src="/placeholder.svg?height=40&width=40" alt="User avatar" className="object-cover" />
                     </div>
                     <div>
                         <h3 className="font-medium">@kimwolfdanza</h3>

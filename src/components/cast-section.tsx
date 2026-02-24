@@ -18,14 +18,13 @@ export default function CastSection({ castMembers }: CastSectionProps) {
                 {castMembers.map((member, index) => (
                     <div key={index} className="flex-shrink-0 text-center bg-white rounded">
                         <div className="relative h-40 w-36 overflow-hidden rounded-t cursor-pointer">
-                            <Image
+                            <img
                                 src={
                                     member.profile_path
                                         ? `https://image.tmdb.org/t/p/w276_and_h350_face${member.profile_path}`
                                         : "/assets/No-Image-Placeholder.png"
                                 }
                                 alt={member.name || "cast"}
-                                fill
                                 sizes="(max-width: 640px) 100px, 144px"
                                 className="object-cover"
                             />

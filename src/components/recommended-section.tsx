@@ -23,17 +23,16 @@ export default function RecommendedSection({ recommendedMovies }: RecommendedSec
                     <Link key={index} href={`/${movie.media_type == "movie" ? "movies" : "tv"}/${movie.id}`}>
                         <div className="group cursor-pointer">
                             <div className="relative aspect-[2/3] overflow-hidden rounded-lg">
-                                <Image
+                                <img
                                     src={
                                         movie.poster_path
                                             ? `https://www.themoviedb.org/t/p/w440_and_h660_face${movie.poster_path}`
                                             : "/assets/No-Image-Placeholder.png"
                                     }
                                     alt={movie.title || movie.original_name}
-                                    fill
+                                    
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 20vw"
                                     className="object-cover transition-transform group-hover:scale-105"
-                                    unoptimized={true}
                                 />
                             </div>
                             <h3 className="mt-2 text-sm font-medium">{movie.title || movie.original_name}</h3>

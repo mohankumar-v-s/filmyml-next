@@ -21,7 +21,7 @@ export default function MoviesCollectionList({ collectionList, collectionName, c
                                 className="min-w-[160px] text-gray-400 text-center m-3 cursor-pointer group"
                             >
                                 <div>
-                                    <Image
+                                    <img
                                         src={poster_path ? `https://www.themoviedb.org/t/p/w440_and_h660_face${poster_path}` : `/assets/No-Image-Placeholder.png`}
                                         alt={original_name || `Movie ${id}`}
                                         width={440}
