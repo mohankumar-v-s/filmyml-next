@@ -12,7 +12,7 @@ export default function Profile() {
         <div className="top-5 right-5">
             <div className="relative inline-block">
                 <Link href="/profile">
-                    <Image
+                    <img
                         className="h-10 w-10 rounded-full select-none"
                         src={`${PROFILE_PATH}`}
                         alt="profile_pic"
